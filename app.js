@@ -16,7 +16,7 @@ const app = express();
 
 require('./config/passport')(passport);
 
-mongoose.connect("mongodb+srv://shravan:"+ process.env.PASS + "@cluster0.fwnqe.mongodb.net/PaymentGateway", {useNewUrlParser: true})
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true})
 .then(()=> console.log("Mongodb connected..."))
 .catch(err=> console.log(err));
 
