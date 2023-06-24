@@ -34,6 +34,7 @@ app.use(session({
     secret: 'secret',
     resave: true,
     saveUninitialized: true,
+    cookie:{_expires : 120000} // The session expires after 2 minutes
   }));
 
 // Passport middleware
